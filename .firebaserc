@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "colonos-11c52": {
+      "hosting": {
+        "app": [
+          "colonos-11c52"
+        ]
+      }
+    }
+  }
+}

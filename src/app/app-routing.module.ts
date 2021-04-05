@@ -3,13 +3,22 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    // canActivate:[AuthGuard]
   },
   {
     path: 'acces',
@@ -131,6 +140,43 @@ const routes: Routes = [
     path: 'posts-public',
     loadChildren: () => import('./posts-public/posts-public.module').then( m => m.PostsPublicPageModule)
   },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'balance-cuentas',
+    loadChildren: () => import('./balance-cuentas/balance-cuentas.module').then( m => m.BalanceCuentasPageModule)
+  },
+  {
+    path: 'balance-authorize',
+    loadChildren: () => import('./balance-authorize/balance-authorize.module').then( m => m.BalanceAuthorizePageModule)
+  },
+  {
+    path: 'balance-authorizem',
+    loadChildren: () => import('./balance-authorizem/balance-authorizem.module').then( m => m.BalanceAuthorizemPageModule)
+  },
+  {
+    path: 'balance-authorize-menu',
+    loadChildren: () => import('./balance-authorize-menu/balance-authorize-menu.module').then( m => m.BalanceAuthorizeMenuPageModule)
+  },
+  {
+    path: 'emergencies-robo',
+    loadChildren: () => import('./emergencies-robo/emergencies-robo.module').then( m => m.EmergenciesRoboPageModule)
+  },
+  {
+    path: 'emergencies-siniestros',
+    loadChildren: () => import('./emergencies-siniestros/emergencies-siniestros.module').then( m => m.EmergenciesSiniestrosPageModule)
+  },
+  {
+    path: 'emergencies-salud',
+    loadChildren: () => import('./emergencies-salud/emergencies-salud.module').then( m => m.EmergenciesSaludPageModule)
+  },
+
 ];
 
 @NgModule({

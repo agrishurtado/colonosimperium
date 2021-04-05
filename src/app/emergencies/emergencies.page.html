@@ -1,20 +1,22 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -33,11 +35,11 @@
   
     <ion-card>
    
-      <ion-button mode="md" id="btnMenus" >robos </ion-button><br>
+      <ion-button mode="md" id="btnMenus"  [routerLink]="['/emergencies-robo']" >robos </ion-button><br>
       <hr>
-      <ion-button mode="md" id="btnMenus">siniestros</ion-button><br>
+      <ion-button mode="md" id="btnMenus" [routerLink]="['/emergencies-siniestros']">siniestros</ion-button><br>
       <hr>
-      <ion-button mode="md" id="btnMenus">salud</ion-button><br>
+      <ion-button mode="md" id="btnMenus" [routerLink]="['/emergencies-salud']">salud</ion-button><br>
       
   
   
